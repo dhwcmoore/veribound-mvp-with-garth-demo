@@ -190,21 +190,26 @@ Why it matters: A bank processing 10M transactions/day at 1µs/check = 10 second
 
 ## Additional Commands to Try
 
-After running the main demo, you can explore further:
+After running the main demo, you can explore the CLI tool:
 ```bash
 # Show example Basel III input format
 dune exec ./bin/veribound.exe -- sample basel
 
-# Create a sealed compliance report
-dune exec ./bin/veribound.exe -- sample basel > data/basel_input.json
-dune exec ./bin/veribound.exe -- seal basel data/basel_input.json
+# Create input file and seal it
+dune exec ./bin/veribound.exe -- sample basel > /tmp/basel_input.json
+dune exec ./bin/veribound.exe -- seal basel /tmp/basel_input.json
 
-# Verify the sealed report
-dune exec ./bin/veribound.exe -- verify results/basel_report_sealed_*.json
+# List the sealed report that was created
+ls results/
 
-# Create a tampered copy and watch verification fail
-dune exec ./bin/veribound.exe -- tamper results/basel_report_sealed_*.json
-dune exec ./bin/veribound.exe -- verify results/basel_report_sealed_*_TAMPERED.json
+# Verify it (replace TIMESTAMP with actual filename from ls output)
+dune exec ./bin/veribound.exe -- verify results/basel_report_sealed_TIMESTAMP.json
+
+# Create a tampered copy
+dune exec ./bin/veribound.exe -- tamper results/basel_report_sealed_TIMESTAMP.json
+
+# Watch verification fail on the tampered copy
+dune exec ./bin/veribound.exe -- verify results/basel_report_sealed_TIMESTAMP_TAMPERED.json
 ```
 
 ---
