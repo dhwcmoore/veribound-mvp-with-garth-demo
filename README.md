@@ -15,33 +15,25 @@ No local setup required. Everything runs in your browser.
 3. Click **Create codespace on main**
 4. Wait about 60 seconds for the environment to load
 
-### Step 2: Install OCaml Dependencies
+### Step 2: Install OCaml and Dependencies
 
 In the Codespace terminal, run:
 ```bash
-# Install opam (OCaml package manager)
 sudo apt-get update
 sudo apt-get install -y opam
 opam init --disable-sandboxing --yes
 eval $(opam env)
-
-# Install project dependencies
-opam install . --deps-only --yes
+opam install dune digestif yojson --yes
+eval $(opam env)
 ```
 
 This takes about 2-3 minutes.
 
-### Step 3: Build the Project
+### Step 3: Build and Run the Demo
 ```bash
 dune build
-```
-
-### Step 4: Run the Demo
-```bash
 dune exec ./test/demo_garth_response.exe
 ```
-
-This runs in about 1 second and produces the output explained below.
 
 ---
 
