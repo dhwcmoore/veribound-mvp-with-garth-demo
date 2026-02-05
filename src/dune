@@ -1,0 +1,2 @@
+; src/ root dune file intentionally minimal.
+; Libraries live in subdirectories: seal/, verifier/, flocq/, veribound_hash_seal/.

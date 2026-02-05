@@ -1,0 +1,3 @@
+(executable
+ (public_name demo_generator)
+ (name demo_generator))

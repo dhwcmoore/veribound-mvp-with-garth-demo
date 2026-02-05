@@ -1,0 +1,4 @@
+(executable
+ (public_name regulatory_compliance_generated)
+ (name regulatory_compliance_generated)
+ (libraries src))

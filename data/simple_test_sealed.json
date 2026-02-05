@@ -1,0 +1,12 @@
+{
+  "seal_hash": "cd22a8ac3359edf0b82df3f1f892bf0ae73a54f7ff09e9141b835e72747026e0",
+  "irrational_signature": 1.23456789,
+  "results": [
+    {
+      "category": "TEST_CATEGORY",
+      "lower": 1.0,
+      "upper": 2.0,
+      "verdict": "PASS"
+    }
+  ]
+}

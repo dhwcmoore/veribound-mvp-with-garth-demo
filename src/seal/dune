@@ -1,0 +1,4 @@
+(library
+ (name irrational_seal)
+ (public_name veribound-core.irrational_seal)
+ (libraries yojson digestif))

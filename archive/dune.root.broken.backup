@@ -1,0 +1,5 @@
+(executable
+ (public_name demo_veribound)
+ (name demo_veribound)
+ (libraries veribound_hash_seal yojson unix)
+ (flags (:standard -w -32)))

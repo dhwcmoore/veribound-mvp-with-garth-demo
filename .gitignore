@@ -1,0 +1,5 @@
+_build/
+*.exe
+*.out
+results/
+.DS_Store

@@ -1,0 +1,15 @@
+{
+  "irrational_signature": 3.141592653589793,
+  "results": {
+    "original_results": [
+      {
+        "category": "FINANCIAL_AUDIT",
+        "lower": 8.0,
+        "upper": 12.0,
+        "verdict": "COMPLIANT"
+      }
+    ],
+    "tamper_marker": "THIS SHOULD BREAK THE HASH"
+  },
+  "seal_hash": "b95550c8b35035e05a7ac35d0d813fc09807d58c02e4dbb0bb870b6442401359"
+}

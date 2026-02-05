@@ -1,0 +1,13 @@
+{
+  "seal_hash": "4137017a357873355016b5cf5996f66ab3136ce4e37a280d6222307c68119c16",
+  "irrational_signature": 0.0220346452238297,
+  "results": [
+    {
+      "category": "EPA_TEST",
+      "lower": 0.25,
+      "upper": 0.75,
+      "verdict": "COMPLIANT"
+    },
+    { "category": "FDA_TEST", "lower": 0.8, "upper": 1.0, "verdict": "SAFE" }
+  ]
+}

@@ -1,0 +1,5 @@
+(executable
+ (name mvp_demo)
+ (modules mvp_demo)
+ (libraries yojson veribound-core.verifier)
+ (flags (:standard -w -27 -w -33)))

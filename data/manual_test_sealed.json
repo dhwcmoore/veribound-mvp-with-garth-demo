@@ -1,0 +1,12 @@
+{
+  "seal_hash": "b9cc7afb9f9f495783ae37698e5c2a25c926bc7948df4b7375fd9cea5444acd8",
+  "irrational_signature": 2.718281828459045,
+  "results": [
+    {
+      "category": "MANUAL_TEST",
+      "lower": 5.0,
+      "upper": 10.0,
+      "verdict": "SUCCESS"
+    }
+  ]
+}

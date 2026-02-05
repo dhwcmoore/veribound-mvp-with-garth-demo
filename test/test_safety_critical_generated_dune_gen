@@ -1,0 +1,4 @@
+(executable
+ (public_name safety_critical_generated)
+ (name safety_critical_generated)
+ (libraries src))

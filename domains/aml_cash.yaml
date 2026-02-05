@@ -1,0 +1,5 @@
+name: AML Cash Transaction Monitoring
+unit: $
+- range: ["0.0", "10000.0"] category: Below_CTR_Threshold
+- range: ["10000.0", "999999999.0"] category: CTR_REQUIRED
+global_bounds: ["0.0", "999999999.0"]

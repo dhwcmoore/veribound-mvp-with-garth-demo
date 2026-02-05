@@ -1,0 +1,4 @@
+(library
+ (name veribound_hash_seal)
+ (libraries yojson str)
+ (flags (:standard -w -32)))

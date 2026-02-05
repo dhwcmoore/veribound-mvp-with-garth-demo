@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "category": "MANUAL_TEST",
+      "lower": 5.0,
+      "upper": 10.0,
+      "verdict": "SUCCESS"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+(executables
+ (names
+   Demonstration_Financial_Regimes   
+   demonstration_1
+   demonstration_2
+   demonstration_3
+   test_verifier
+   test_verifier_tampered
+   hash_seal_core_test
+   test_dual_engine
+   test_comprehensive_demo
+   test_pathological_cases
+   test_neurotoxin_demo
+   test_ultimate_pathological_generated
+   test_arithmetic_scaling_torture
+   test_dynamic_audience)
+ (modules
+   Demonstration_Financial_Regimes   
+   Demonstration_1
+   Demonstration_2
+   Demonstration_3
+   Test_verifier
+   test_verifier_tampered
+   hash_seal_core_test
+   test_dual_engine
+   test_comprehensive_demo
+   test_pathological_cases
+   test_neurotoxin_demo
+   test_ultimate_pathological_generated
+   test_arithmetic_scaling_torture
+   test_dynamic_audience)
+ (libraries verifier yojson digestif veribound-core.irrational_seal veribound-core.flocq_engine veribound.cli veribound.engine_runner veribound.basic_float)
+ (flags (:standard -w -27 -w -33)))

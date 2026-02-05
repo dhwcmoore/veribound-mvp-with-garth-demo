@@ -1,0 +1,4 @@
+(library
+ (name verifier)
+ (public_name veribound-core.verifier)
+ (libraries yojson veribound-core.irrational_seal digestif str))
