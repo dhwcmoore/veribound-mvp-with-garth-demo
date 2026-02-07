@@ -1,5 +1,3 @@
----
-
 # VeriBound: Responding to Industry Feedback
 
 **A runnable demo addressing concerns about formal verification in software engineering**
