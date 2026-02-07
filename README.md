@@ -47,24 +47,40 @@ The demo addresses six concerns about formal verification, point by point:
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
-### Point 1: Pure Code Isolation
+###Point 1: Pure Code Isolation
 
-**Concern:** "Most programming languages have no way of isolating side-effect free pure code that could be proven."
+Concern:
+“Most programming languages have no way of isolating side-effect-free pure code that could be proven.”
 
-**What the demo shows:**
-```
-  classify_value 7.5 in [6.0, 8.0]:
-    Call 1: Adequate
-    Call 2: Adequate
-    Identical: true (referential transparency)
+What the demo shows:
 
-  compute_seal_hash:
-    Call 1: 69cfefde2461876ac4bc...
-    Call 2: 69cfefde2461876ac4bc...
-    Identical: true (deterministic)
-```
+classify_value 7.5 in [6.0, 8.0]:
+  Call 1: Adequate
+  Call 2: Adequate
+  Identical: true (referential transparency)
 
-**Explanation:** OCaml's type system enforces purity. A function with signature `float -> string option` cannot perform IO, network calls, or mutation. The compiler rejects code that tries. The demo proves this by calling the same functions twice and showing identical results. This is referential transparency: pure functions always return the same output for the same input.
+compute_seal_hash:
+  Call 1: 69cfefde2461876ac4bc...
+  Call 2: 69cfefde2461876ac4bc...
+  Identical: true (deterministic)
+
+
+Explanation:
+In this demo, the core classification and sealing logic is implemented as side-effect-free computation.
+All input/output operations (reading JSON, writing reports, printing results) are kept outside this core at explicit system boundaries.
+
+OCaml’s type system helps make data flow explicit and makes it practical to isolate such a pure core, but purity here is a design discipline, not something the compiler automatically guarantees.
+
+The demo therefore, establishes purity empirically and structurally:
+
+The same function is invoked multiple times with identical inputs.
+
+Each invocation returns bit-for-bit identical outputs.
+
+No external state, timing, or IO can influence the result.
+
+This property is referential transparency:
+for a fixed input, the verification core always produces the same output.
 
 ---
 
